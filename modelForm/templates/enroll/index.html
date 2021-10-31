@@ -1,0 +1,21 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Models froms</title>
+</head>
+<body>
+    <form action="" method='POST'>
+        {% csrf_token %}
+        {{form.name.label}}
+        {{form.name|add_class:'input-class'|attr:"type:button"}}
+        {{form.email.label}}
+        {{form.email|add_class:'input-class'|attr:"autofocus"}}
+        {{form.password.label}}
+        {{form.password|add_class:'input-class'}}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
